@@ -1,0 +1,86 @@
+body {text-align: center;}
+
+.container {
+    display: block;
+    position: absolute;
+    left: 30%;
+    top: 20%;
+    background-color: silver;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.graph-container {
+    display: inline;
+    background-color: thistle;
+}
+
+.bar-container {
+    margin: 15px;
+    position: relative;
+    float:left;
+    width: 45px;
+    
+}
+
+.bar {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-color: white;
+}
+
+.bar-white {
+    width: 100%;
+}
+.legend {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+.percent-text {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 20px;
+    
+}
+
+[id^="bar_"] {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    vertical-align: bottom;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 0.5s;
+    background-color: grey;
+}
+#bar_30 {
+    animation-name: bar_lift_30;
+    height: 30%;
+}
+
+#bar_40 {
+    height: 40%;
+    animation-name: bar_lift_40;
+}
+
+@keyframes bar_lift_30 {
+    from{background-color: white; height: 0%;}
+    to{background-color: grey; height: 30%;}
+}
+
+@keyframes bar_lift_40 {
+    from{background-color: white; height: 0%;}
+    to{background-color: grey; height: 40%;}
+}
+
+@keyframes bar_lift_80 {
+    from{background-color: white; height: 0%;}
+    to{background-color: grey; height: 80%;}
+}
+#bar_80 {
+    animation-name: bar_lift_80;
+    height: 80%;
+}
